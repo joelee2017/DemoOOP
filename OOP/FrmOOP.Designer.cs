@@ -142,6 +142,9 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.button43 = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -918,6 +921,9 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.textBox2);
+            this.tabPage5.Controls.Add(this.label11);
+            this.tabPage5.Controls.Add(this.button43);
             this.tabPage5.Controls.Add(this.button24);
             this.tabPage5.Controls.Add(this.button23);
             this.tabPage5.Controls.Add(this.button25);
@@ -938,6 +944,7 @@
             this.button24.TabIndex = 7;
             this.button24.Text = "InterestRate";
             this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.button24_Click);
             // 
             // button23
             // 
@@ -948,6 +955,7 @@
             this.button23.TabIndex = 6;
             this.button23.Text = "Static Class";
             this.button23.UseVisualStyleBackColor = true;
+            this.button23.Click += new System.EventHandler(this.button23_Click);
             // 
             // button25
             // 
@@ -958,6 +966,7 @@
             this.button25.TabIndex = 5;
             this.button25.Text = "Static  Method";
             this.button25.UseVisualStyleBackColor = true;
+            this.button25.Click += new System.EventHandler(this.button25_Click);
             // 
             // button26
             // 
@@ -1313,6 +1322,32 @@
             this.dataGridView3.Size = new System.Drawing.Size(378, 150);
             this.dataGridView3.TabIndex = 16;
             // 
+            // button43
+            // 
+            this.button43.Location = new System.Drawing.Point(571, 107);
+            this.button43.Name = "button43";
+            this.button43.Size = new System.Drawing.Size(75, 23);
+            this.button43.TabIndex = 8;
+            this.button43.Text = "Hello";
+            this.button43.UseVisualStyleBackColor = true;
+            this.button43.Click += new System.EventHandler(this.button43_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(329, 112);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(36, 12);
+            this.label11.TabIndex = 9;
+            this.label11.Text = "Name";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(412, 105);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 22);
+            this.textBox2.TabIndex = 10;
+            // 
             // FrmOOP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -1349,6 +1384,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
             this.tabPage6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             this.groupBox4.ResumeLayout(false);
@@ -1474,6 +1510,9 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button button43;
     }
 }
 

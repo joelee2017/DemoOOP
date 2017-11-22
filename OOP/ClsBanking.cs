@@ -166,6 +166,15 @@ namespace OOP
           
         }
 
+        public static double InterstRate//利息
+        {
+            get
+            {
+                //-------codes--------
+                return 3.5;
+            }
+        }
+
         public decimal Deposit (decimal money)
         {
             this.m_Balance += money;

@@ -47,11 +47,29 @@
   <ItemGroup>
     <Compile Include="ClsBanking.cs" />
     <Compile Include="ClsMemoryTest.cs" />
+    <Compile Include="FrmLogOn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogOn.Designer.cs">
+      <DependentUpon>FrmLogOn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMember.Designer.cs">
+      <DependentUpon>FrmMember.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmOOP.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmOOP.Designer.cs">
       <DependentUpon>FrmOOP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProducts.Designer.cs">
+      <DependentUpon>FrmProducts.cs</DependentUpon>
     </Compile>
     <Compile Include="NorthwindDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -60,6 +78,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmLogOn.resx">
+      <DependentUpon>FrmLogOn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmOOP.resx">
       <DependentUpon>FrmOOP.cs</DependentUpon>
     </EmbeddedResource>

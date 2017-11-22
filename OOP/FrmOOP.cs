@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +16,7 @@ namespace OOP
         public FrmOOP()
         {
             InitializeComponent();
-            this.tabControl1.SelectedIndex = 3;
+            this.tabControl1.SelectedIndex = 4;
         }
         ClsBanking x = new ClsBanking();
 
@@ -305,6 +306,14 @@ namespace OOP
                 new MyPoint{P1=15, P2=13, P3=18},
             };
             this.dataGridView3.DataSource = mylist;
+
+            //=======================================
+            List<ClsBanking> BankingList = new List<ClsBanking>();
+            BankingList.Add(new ClsBanking { Balance = 777, P2 = 8, P3 = 7 });
+            BankingList.Add(new ClsBanking { Balance = 888, P2 = 8, P3 = 7 });
+            BankingList.Add(new ClsBanking { Balance = 66, P2 = 8, P3 = 7 });
+            BankingList.Add(new ClsBanking { Balance = 57, P2 = 7, P3 = 7 });
+            this.dataGridView3.DataSource = BankingList;
         }
 
         class MyPoint
@@ -314,18 +323,18 @@ namespace OOP
 
             }
 
-            public MyPoint(int p1)
+            public MyPoint(int p1)//方法
             {
 
             }
 
-            public MyPoint(int p1, int p2)
+            public MyPoint(int p1, int p2)//方法
             {
                 this.P1 = p1;
                 this.P2 = P2;
             }
 
-            public MyPoint(int p1, int p2, int p3)
+            public MyPoint(int p1, int p2, int p3)//方法
             {
                 this.P1 = p1;
                 this.P2 = P2;
@@ -333,8 +342,9 @@ namespace OOP
             }
 
 
-            private int m_P1;
-            public int P1
+            private int m_P1;//欄位
+
+            public int P1//屬性
             {
                 get
                 {
@@ -346,13 +356,41 @@ namespace OOP
                 }
             }
 
-            public int P2 { get; set; }
+            public int P2 { get; set; }//屬性
 
-            public int P3 { get; set; }
+            public int P3 { get; set; }//屬性
 
-            public string Field1, Field2;
+            public string Field1, Field2;//欄位
         }
 
+        private void button25_Click(object sender, EventArgs e)
+        {
+            //static Method 靜態方法
+            File.Copy("a.txt", "a1.txt", true);
 
+            //=======================
+            //Instance Method
+            FileInfo f = new FileInfo("b.txt");
+            MessageBox.Show(f.CreationTime + "\n" + f.FullName + "\n" + f.Extension);
+            f.CopyTo("b1.txt", true);
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            //static class Math
+            //static class File
+            int n = Math.Abs(-100);
+            MessageBox.Show(n.ToString());
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(ClsBanking.InterstRate.ToString());
+        }
+
+        private void button43_Click(object sender, EventArgs e)
+        {
+            this.Text = "Hello" + textBox2.Text;
+        }
     }
 }
