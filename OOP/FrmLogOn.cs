@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.Drawing.Drawing2D;
+
 namespace OOP
 {
     public partial class FrmLogOn : Form
@@ -15,6 +17,21 @@ namespace OOP
         public FrmLogOn()
         {
             InitializeComponent();
+
+            this.Paint += FrmLogOn_Paint;
+        }
+
+        private void FrmLogOn_Paint(object sender, PaintEventArgs e)
+        {
+            //GDI +
+            Graphics g = e.Graphics; //宣告繪圖圖形
+            //SolidBrush brush1 = new SolidBrush(Color.Blue);單一色藍色
+
+            Point pt1 = new Point(0, 0);//宣告第一點
+            Point pt2 = new Point(0, this.ClientRectangle.Height);//宣告第二點工作區矩形高
+            LinearGradientBrush brush1 = new LinearGradientBrush(pt1, pt2, Color.Black, Color.OrangeRed);
+            g.FillRectangle(brush1, this.ClientRectangle);
+            //宣告漸層圖形初始化(pt1, pt2, Color.Black, Color.OrangeRed);
         }
 
         protected string Title

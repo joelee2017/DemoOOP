@@ -133,7 +133,7 @@ namespace OOP
         }
 
         private void button10_Click(object sender, EventArgs e)
-        { int i = 100;
+        {   //int i = 100;
             try
                
 
