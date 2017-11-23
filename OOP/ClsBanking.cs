@@ -13,7 +13,7 @@ namespace OOP
         //Field - Class Var.
         //internal decimal Balance = 0;
 
-        public ClsBanking()//建構子
+        public ClsBanking()//建構子(初始化)
         {
 
         }
@@ -38,7 +38,7 @@ namespace OOP
 
 
         //Property 
-        private decimal m_Balance;
+        protected decimal m_Balance;//protected開放至延伸子類別使用
         public decimal Balance
         {
             get
@@ -175,13 +175,13 @@ namespace OOP
             }
         }
 
-        public decimal Deposit (decimal money)
+        public virtual decimal Deposit (decimal money)//virtual關鍵字可以被子類別修改
         {
             this.m_Balance += money;
             return this.m_Balance;
 
         }
-        public decimal Withdraw(decimal money)
+        public virtual decimal Withdraw(decimal money)//virtual關鍵字可以被子類別修改
         {
              if (this.m_Balance- money<0)
             {

@@ -16,7 +16,7 @@ namespace OOP
         public FrmOOP()
         {
             InitializeComponent();
-            this.tabControl1.SelectedIndex = 4;
+            this.tabControl1.SelectedIndex = 5;
         }
         ClsBanking x = new ClsBanking();
 
@@ -391,6 +391,36 @@ namespace OOP
         private void button43_Click(object sender, EventArgs e)
         {
             this.Text = "Hello" + textBox2.Text;
+        }
+
+        ClsSpecialBanking b = new ClsSpecialBanking();
+        private void button39_Click(object sender, EventArgs e)
+        {
+
+            this.label4.Text = b.Deposit(1000).ToString("c2");
+        }
+
+        private void button27_Click(object sender, EventArgs e)
+        {
+            this.label4.Text = b.Withdraw(1000).ToString("c2");
+        }
+               
+        ClsBanking myBase;//父型別變數
+        private void button30_Click(object sender, EventArgs e)
+        {
+            if (this.checkBox1.Checked)//判斷進入父類別 還是 子類別
+            {
+                myBase = new ClsSpecialBanking();
+            }
+            else
+            {
+                myBase = new ClsBanking();
+            }
+        }
+
+        private void button28_Click(object sender, EventArgs e)
+        {
+            this.label4.Text = myBase.Deposit(1000).ToString("c2");
         }
     }
 }

@@ -19,6 +19,13 @@ namespace OOP
             InitializeComponent();
 
             this.Paint += FrmLogOn_Paint;
+
+            this.Color1 = Color.ForestGreen;
+            this.Color2 = Color.DarkGreen;
+        }
+        private void FrmLogOn_Resize(object sender, EventArgs e)
+        {
+            this.Invalidate();//背景重繪 Paint Event
         }
 
         private void FrmLogOn_Paint(object sender, PaintEventArgs e)
@@ -29,7 +36,7 @@ namespace OOP
 
             Point pt1 = new Point(0, 0);//宣告第一點
             Point pt2 = new Point(0, this.ClientRectangle.Height);//宣告第二點工作區矩形高
-            LinearGradientBrush brush1 = new LinearGradientBrush(pt1, pt2, Color.Black, Color.OrangeRed);
+            LinearGradientBrush brush1 = new LinearGradientBrush(pt1, pt2, this.Color1,this.Color2);
             g.FillRectangle(brush1, this.ClientRectangle);
             //宣告漸層圖形初始化(pt1, pt2, Color.Black, Color.OrangeRed);
         }
@@ -46,6 +53,23 @@ namespace OOP
             }
         }
 
+        public Color Color1 { get; set; }//自動實作
+
+        private Color m_Color2;
+        public Color Color2
+        {
+            get
+            {
+                return m_Color2;
+            }
+            set
+            {
+                this.m_Color2 = value;
+                this.Invalidate();
+            }
+        }
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             this.Text = "sfsd";
@@ -59,5 +83,7 @@ namespace OOP
             this.Title = "1111";
             
         }
+
+
     }
 }

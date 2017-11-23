@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="ClsBanking.cs" />
     <Compile Include="ClsMemoryTest.cs" />
+    <Compile Include="ClsSpecialBanking.cs" />
     <Compile Include="FrmLogOn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +82,9 @@
     <EmbeddedResource Include="FrmLogOn.resx">
       <DependentUpon>FrmLogOn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmMember.resx">
+      <DependentUpon>FrmMember.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmOOP.resx">
       <DependentUpon>FrmOOP.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,6 +98,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
     <None Include="NorthwindDataSet.xsc">
       <DependentUpon>NorthwindDataSet.xsd</DependentUpon>
     </None>

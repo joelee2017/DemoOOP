@@ -94,6 +94,11 @@
             this.button16 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.button42 = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.button41 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -104,6 +109,9 @@
             this.button21 = new System.Windows.Forms.Button();
             this.button22 = new System.Windows.Forms.Button();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.button43 = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
             this.button25 = new System.Windows.Forms.Button();
@@ -136,15 +144,7 @@
             this.button56 = new System.Windows.Forms.Button();
             this.productsTableAdapter = new OOP.NorthwindDataSetTableAdapters.ProductsTableAdapter();
             this.tableAdapterManager = new OOP.NorthwindDataSetTableAdapters.TableAdapterManager();
-            this.button41 = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.button42 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.button43 = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -163,6 +163,8 @@
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tabPage6.SuspendLayout();
@@ -170,8 +172,6 @@
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.tabPage7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -819,6 +819,53 @@
             this.tabPage4.Text = "Constructor / Destructor";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(443, 173);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowTemplate.Height = 24;
+            this.dataGridView3.Size = new System.Drawing.Size(378, 150);
+            this.dataGridView3.TabIndex = 16;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(443, 3);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(378, 159);
+            this.dataGridView2.TabIndex = 15;
+            // 
+            // button42
+            // 
+            this.button42.Location = new System.Drawing.Point(315, 242);
+            this.button42.Name = "button42";
+            this.button42.Size = new System.Drawing.Size(75, 23);
+            this.button42.TabIndex = 14;
+            this.button42.Text = "建構子練習";
+            this.button42.UseVisualStyleBackColor = true;
+            this.button42.Click += new System.EventHandler(this.button42_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(211, 242);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(46, 12);
+            this.label10.TabIndex = 13;
+            this.label10.Text = "label10";
+            // 
+            // button41
+            // 
+            this.button41.Location = new System.Drawing.Point(81, 242);
+            this.button41.Name = "button41";
+            this.button41.Size = new System.Drawing.Size(75, 23);
+            this.button41.TabIndex = 12;
+            this.button41.Text = "Test Gc";
+            this.button41.UseVisualStyleBackColor = true;
+            this.button41.Click += new System.EventHandler(this.button41_Click);
+            // 
             // button20
             // 
             this.button20.Location = new System.Drawing.Point(236, 173);
@@ -934,6 +981,32 @@
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Static";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(412, 105);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 22);
+            this.textBox2.TabIndex = 10;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(329, 112);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(36, 12);
+            this.label11.TabIndex = 9;
+            this.label11.Text = "Name";
+            // 
+            // button43
+            // 
+            this.button43.Location = new System.Drawing.Point(571, 107);
+            this.button43.Name = "button43";
+            this.button43.Size = new System.Drawing.Size(75, 23);
+            this.button43.TabIndex = 8;
+            this.button43.Text = "Hello";
+            this.button43.UseVisualStyleBackColor = true;
+            this.button43.Click += new System.EventHandler(this.button43_Click);
             // 
             // button24
             // 
@@ -1100,6 +1173,7 @@
             this.button30.TabIndex = 3;
             this.button30.Text = "new Account";
             this.button30.UseVisualStyleBackColor = true;
+            this.button30.Click += new System.EventHandler(this.button30_Click);
             // 
             // button29
             // 
@@ -1120,6 +1194,7 @@
             this.button28.TabIndex = 1;
             this.button28.Text = "Deposit";
             this.button28.UseVisualStyleBackColor = true;
+            this.button28.Click += new System.EventHandler(this.button28_Click);
             // 
             // checkBox1
             // 
@@ -1154,6 +1229,7 @@
             this.button27.TabIndex = 1;
             this.button27.Text = "Withdraw";
             this.button27.UseVisualStyleBackColor = true;
+            this.button27.Click += new System.EventHandler(this.button27_Click);
             // 
             // button39
             // 
@@ -1164,6 +1240,7 @@
             this.button39.TabIndex = 0;
             this.button39.Text = "Deposit";
             this.button39.UseVisualStyleBackColor = true;
+            this.button39.Click += new System.EventHandler(this.button39_Click);
             // 
             // button40
             // 
@@ -1271,82 +1348,9 @@
             this.tableAdapterManager.ProductsTableAdapter = this.productsTableAdapter;
             this.tableAdapterManager.UpdateOrder = OOP.NorthwindDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // button41
-            // 
-            this.button41.Location = new System.Drawing.Point(81, 242);
-            this.button41.Name = "button41";
-            this.button41.Size = new System.Drawing.Size(75, 23);
-            this.button41.TabIndex = 12;
-            this.button41.Text = "Test Gc";
-            this.button41.UseVisualStyleBackColor = true;
-            this.button41.Click += new System.EventHandler(this.button41_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(211, 242);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(46, 12);
-            this.label10.TabIndex = 13;
-            this.label10.Text = "label10";
-            // 
-            // button42
-            // 
-            this.button42.Location = new System.Drawing.Point(315, 242);
-            this.button42.Name = "button42";
-            this.button42.Size = new System.Drawing.Size(75, 23);
-            this.button42.TabIndex = 14;
-            this.button42.Text = "建構子練習";
-            this.button42.UseVisualStyleBackColor = true;
-            this.button42.Click += new System.EventHandler(this.button42_Click);
-            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(443, 3);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(378, 159);
-            this.dataGridView2.TabIndex = 15;
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(443, 173);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(378, 150);
-            this.dataGridView3.TabIndex = 16;
-            // 
-            // button43
-            // 
-            this.button43.Location = new System.Drawing.Point(571, 107);
-            this.button43.Name = "button43";
-            this.button43.Size = new System.Drawing.Size(75, 23);
-            this.button43.TabIndex = 8;
-            this.button43.Text = "Hello";
-            this.button43.UseVisualStyleBackColor = true;
-            this.button43.Click += new System.EventHandler(this.button43_Click);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(329, 112);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(36, 12);
-            this.label11.TabIndex = 9;
-            this.label11.Text = "Name";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(412, 105);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 10;
             // 
             // FrmOOP
             // 
@@ -1381,6 +1385,8 @@
             this.tabPage3.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.tabPage5.ResumeLayout(false);
@@ -1391,8 +1397,6 @@
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.tabPage7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
 
         }
