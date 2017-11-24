@@ -192,5 +192,10 @@ namespace OOP
 
         }
 
+        public override string ToString()
+        {
+            return "ClsBanking" + this.Balance;
+        }
+
     }
 }

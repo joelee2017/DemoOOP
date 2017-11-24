@@ -16,7 +16,7 @@ namespace OOP
         public FrmOOP()
         {
             InitializeComponent();
-            this.tabControl1.SelectedIndex = 5;
+            this.tabControl1.SelectedIndex = 6;
         }
         ClsBanking x = new ClsBanking();
 
@@ -229,9 +229,9 @@ namespace OOP
             a = null;
         }
 
-        private void button17_Click(object sender, EventArgs e)
+        private void button17_Click(object sender, EventArgs e)// 回收記憶體
         {
-            GC.Collect();//主動啟動Garbage Collection回收使用過的記憶體
+            //GC.Collect();//主動啟動Garbage Collection回收使用過的記憶體
         }
         int count = 0;
         private void button41_Click(object sender, EventArgs e)
@@ -421,6 +421,126 @@ namespace OOP
         private void button28_Click(object sender, EventArgs e)
         {
             this.label4.Text = myBase.Deposit(1000).ToString("c2");
+        }
+
+        private void button31_Click(object sender, EventArgs e)
+        {
+            foreach (Control x in this.groupBox4.Controls)
+            {
+                if (x is Button)
+                {
+                    x.BackColor = Color.Orange;
+                    x.ForeColor = Color.White;
+                }
+            }
+        }
+
+        private void button37_Click(object sender, EventArgs e)
+        {
+            List<ClsBanking> bankingList = new List<ClsBanking>();
+            bankingList.Add(new ClsBanking { Balance = 999 });
+            bankingList.Add(new ClsSpecialBanking { Balance = 1999, P2 = 11, P3 = 6 });
+
+            this.dataGridView5.DataSource = bankingList;
+            this.listBox1.DataSource = bankingList;
+        }
+
+        private void button38_Click(object sender, EventArgs e)
+        {
+
+            ((Button)sender).Text = "xxxxx";
+            ClsBanking a = new ClsBanking();
+            MessageBox.Show("a balance =" + MyDeposit(a));
+
+            ClsSpecialBanking b = new ClsSpecialBanking();
+            MessageBox.Show("b balance =" + MyDeposit(b));
+        }
+
+        decimal MyDeposit(ClsBanking x)
+        {
+            //...Call M1()
+            if(x is ClsSpecialBanking)
+            {
+                (((ClsSpecialBanking)x).M1)();
+            }
+
+            return x.Deposit(1000);
+        }
+
+        private void button32_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("" + myBase.ToString());
+        }
+        int acb = 999;//遮蔽(Shadowing)宣告的數質會因區域中宣告改變，以及遮蔽。
+        private void button56_Click(object sender, EventArgs e)
+        {
+            int abc = 888;
+            MessageBox.Show("abc =" + abc);
+        }
+
+        private void button55_Click(object sender, EventArgs e)//遮蔽範例
+        {
+            ClsSpecialBanking y = new ClsSpecialBanking();
+
+            //父類方法
+            y.Test();
+            y.Test(3);
+            y.Test("df");
+
+            //父類固有， 子類方法新成立
+            y.Test(4, 4);
+
+            y.Test(8, 8, 8);//子類新增
+        }
+
+        private void button54_Click(object sender, EventArgs e)//抽象類別範例
+        {
+                //            嚴重性 程式碼 說明 專案  檔案 行   隱藏項目狀態
+                //錯誤  CS0144 無法建立抽象類別或介面 'TextReader' 的執行個體 OOP F:\MSIT11730305\C#Advanced\Starter\1. OOP\OOP\FrmOOP.cs	498	使用中
+                
+            //System.IO.TextReader tr = new System.IO.TextReader();
+
+            System.IO.StreamReader sr = new StreamReader("a.txt");
+
+            //A a = new A();
+            B b = new B();//實作成功
+
+        }
+
+        abstract class A //抽象類別實作
+        {
+            public void M1()//屬性
+            {
+                //..........
+            }
+
+            public abstract void M2();//方法，只有定義
+        }
+
+        class B : A //子承父，抽象類別實作
+        {
+            public override void M2()//關鍵字子類有override ，父類abstract，方法只定義
+            {
+                //............
+            }
+        }
+
+        private void button52_Click(object sender, EventArgs e)//密封類型實作
+        {
+            //System.IO.FileInfo;
+        }
+
+//        嚴重性 程式碼 說明 專案  檔案 行   隱藏項目狀態
+//錯誤  CS0509	'FrmOOP.C': 無法衍生自密封類型 'FileInfo'	OOP F:\MSIT11730305\C#Advanced\Starter\1. OOP\OOP\FrmOOP.cs	538	使用中
+
+        //class C: System.IO.FileInfo
+        //{
+
+        //}
+
+        sealed class D//密封類型宣告
+        {
+
         }
     }
 }

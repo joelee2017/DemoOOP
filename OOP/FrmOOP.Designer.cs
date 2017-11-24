@@ -1126,13 +1126,14 @@
             // 
             // button38
             // 
-            this.button38.Location = new System.Drawing.Point(44, 243);
+            this.button38.Location = new System.Drawing.Point(44, 244);
             this.button38.Margin = new System.Windows.Forms.Padding(2);
             this.button38.Name = "button38";
             this.button38.Size = new System.Drawing.Size(124, 18);
             this.button38.TabIndex = 7;
             this.button38.Text = "MyDispoist(..)";
             this.button38.UseVisualStyleBackColor = true;
+            this.button38.Click += new System.EventHandler(this.button38_Click);
             // 
             // button37
             // 
@@ -1143,6 +1144,7 @@
             this.button37.TabIndex = 6;
             this.button37.Text = "List <ClsBanking>";
             this.button37.UseVisualStyleBackColor = true;
+            this.button37.Click += new System.EventHandler(this.button37_Click);
             // 
             // button32
             // 
@@ -1153,6 +1155,7 @@
             this.button32.TabIndex = 5;
             this.button32.Text = "Show Balance";
             this.button32.UseVisualStyleBackColor = true;
+            this.button32.Click += new System.EventHandler(this.button32_Click);
             // 
             // button31
             // 
@@ -1163,6 +1166,7 @@
             this.button31.TabIndex = 4;
             this.button31.Text = "Control";
             this.button31.UseVisualStyleBackColor = true;
+            this.button31.Click += new System.EventHandler(this.button31_Click);
             // 
             // button30
             // 
@@ -1297,6 +1301,7 @@
             this.button52.TabIndex = 24;
             this.button52.Text = "Sealed Class";
             this.button52.UseVisualStyleBackColor = true;
+            this.button52.Click += new System.EventHandler(this.button52_Click);
             // 
             // button53
             // 
@@ -1317,6 +1322,7 @@
             this.button54.TabIndex = 22;
             this.button54.Text = "Abstract Class";
             this.button54.UseVisualStyleBackColor = true;
+            this.button54.Click += new System.EventHandler(this.button54_Click);
             // 
             // button55
             // 
@@ -1327,6 +1333,7 @@
             this.button55.TabIndex = 21;
             this.button55.Text = "Inherits - Shadows";
             this.button55.UseVisualStyleBackColor = true;
+            this.button55.Click += new System.EventHandler(this.button55_Click);
             // 
             // button56
             // 
@@ -1337,6 +1344,7 @@
             this.button56.TabIndex = 20;
             this.button56.Text = "Var - Shadows";
             this.button56.UseVisualStyleBackColor = true;
+            this.button56.Click += new System.EventHandler(this.button56_Click);
             // 
             // productsTableAdapter
             // 
